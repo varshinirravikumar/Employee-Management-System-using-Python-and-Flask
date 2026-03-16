@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: black;
+            height: 909px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 63px;
+        }
+
+        .update input {
+            text-align: center;
+            width: 246px;
+            height: 38px;
+            border: 2px solid white;
+            border-radius: 8px;
+        }
+
+        .update {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+
+            display: flex;
+            align-items: center;
+            background-color: rgb(5, 119, 196);
+            width: 65px;
+            height: 37px;
+            justify-content: center;
+            border: 2px solid white;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .input-row input {
+            border: 2px solid rgb(18, 108, 226);
+            border-radius: 5px;
+            padding: 5px;
+            width: 220px;
+            font-size: 14px;
+
+        }
+
+        .input-row label {
+            font-weight: bold;
+            font-size: 19px;
+
+            width: 122px;
+            color: white;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button-class {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            background-color: rgb(5, 119, 196);
+            border-radius: 6px;
+            padding: 5px;
+
+            align-items: center;
+            display: flex;
+            font-weight: bold;
+            width: 43px;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Update Employee Details Here</h1>
+        <form action="/fetch_employee" method="POST">
+            <div class="update">
+                <input type="search" placeholder="Search by Employee ID" name="id">
+
+                <button type="Submit">Fetch</button>
+                <a href="/main">Back</a>
+            </div>
+        </form>
+        {% if emp %}
+
+        <form action="/update_employee" method="POST">
+
+            <input type="hidden" name="id" value="{{emp[0]}}">
+
+            <div class="input-row">
+
+                <label>Name:</label>
+                <input type="text" name="name" value="{{emp[1]}}">
+
+
+
+                <label>Age:</label>
+                <input type="text" name="age" value="{{emp[2]}}">
+
+
+                <label>DOB:</label>
+                <input type="text" name="dob" value="{{emp[3]}}">
+
+                <label>Designation:</label>
+                <input type="text" name="designation" value="{{emp[4]}}">
+            </div>
+            <div class="input-row">
+                <label>Department:</label>
+                <input type="text" name="department" value="{{emp[5]}}">
+
+                <label>Address:</label>
+                <input type="text" name="address" value="{{emp[6]}}">
+
+                <label>Phone:</label>
+                <input type="text" name="phone" value="{{emp[7]}}">
+
+                <label>Salary:</label>
+                <input type="text" name="salary" value="{{emp[8]}}">
+            </div>
+            <div class="button-class">
+                <button type="submit">Update</button>
+            </div>
+
+        </form>
+
+        {% endif %}
+        {% if msg %}
+                <p style="color:white; text-align:center;">
+                    {{msg}}
+                </p>
+                {% endif %}
+    </div>
+</body>
+
+</html>

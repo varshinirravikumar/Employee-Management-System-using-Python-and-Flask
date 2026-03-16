@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .con {
+            background-color: rgba(80, 80, 226, 0.89);
+            width: 500px;
+            height: 507px;
+            color: white;
+
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 22PX;
+        }
+
+        .row-input input {
+            width: 200px;
+            height: 25px;
+            border-radius: 8px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+
+        .row-input label {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 22px;
+            font-family: times new roman;
+        }
+
+        .row-input {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .row-input button {
+            width: 85px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: bold;
+
+            border: 2px solid black;
+            border-radius: 17px;
+            background-color: white;
+            margin-bottom: 4px;
+
+            margin-top: 28px;
+        }
+
+        .row-input button:hover {
+            background-color: rgb(158, 84, 228);
+        }
+
+        h1 {
+            color: black;
+            margin-bottom: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/login" method="POST">
+    <div class="con">
+        <h1>Admin Login</h1>
+        <div class="row-input">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+
+
+        <div class="row-input">
+            <label>Password</label>
+            <input type="Password" name="password" placeholder="Password">
+        </div>
+        <div class="row-input">
+            <button type="Submit">Login</button>
+        </div>
+
+
+    </div>
+    </form>
+</body>
+
+</html>

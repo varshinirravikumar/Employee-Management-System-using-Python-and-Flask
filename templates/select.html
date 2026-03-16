@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 2px solid;
+            background-color: rgb(149, 24, 221);
+            
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 18px;
+        }
+
+        .table-center {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin: 50px;
+
+        }
+
+        th,
+        td {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 70px;
+        }
+        .back-center
+        {
+            display: flex;
+  justify-content: center;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+  border: 2px solid black;
+  background-color:  #0e86f0;
+  border-radius: 4px;
+  padding: 5px;
+  
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employee Details</h1>
+    <div class="back-center"><a href="/main">Back</a></div>
+    
+    <div class="table-center">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>DoB</th>
+                <th>Designation</th>
+                <th>Department</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                
+            </tr>
+            {% for row in employees %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
+                <td>{{row[5]}}</td>
+                <td>{{row[6]}}</td>
+                <td>{{row[7]}}</td>
+                <td>{{row[8]}}</td>
+                
+
+                
+            </tr>
+            {% endfor %}
+             
+
+
+        </table>
+    </div>
+</body>
+
+</html>

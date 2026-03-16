@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+
+<body>
+    <nav>
+        <h1>Employee Management System</h1>
+        
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-bar-box">
+            
+            <label for="menu-toggle" class="close">✕</label>
+            <div class="nav-bar">
+
+                <a href="/add">Insert Employee</a>
+                <a href="/select">Select Employee</a>
+                <a href="/update">Update Employee</a>
+                <a href="/employees">Delete Employee</a>
+                <a href="/signout">Sign Out</a>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.box {
+    padding: 5%;
+    background-color: rgb(27, 126, 219);
+    width: 400px;
+    border-radius: 8px;
+}
+
+.center-input label {
+    width: 120px;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 15px;
+    display: flex;
+    font-size: 19px;
+}
+
+.center-input input {
+    padding: 6px;
+    width: 200px;
+    border-radius: 5px;
+    height: 28px
+}
+
+.center-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.center-input button {
+    width: 80px;
+
+    height: 40px;
+    background-color: #da35c800;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px;
+
+}

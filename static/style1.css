@@ -1,0 +1,80 @@
+nav {
+    background-color: rgb(20, 125, 211);
+    height: 950px;
+    position: relative;
+    padding: 15px;
+}
+/* hide checkbox */
+#menu-toggle {
+    display: none;
+}
+/* hamburger */
+.hamburger {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 6px 0;
+}
+/* sidebar */
+.nav-bar-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    width: 0;
+    /* background-color: rgb(20, 125, 211); */
+    overflow: hidden;
+    transition: -0.9s;
+    padding-top: 80px;
+}
+/* menu */
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 40px;
+}
+.nav-bar a:hover {
+    background: white;
+    color: black;
+}
+/* open menu */
+#menu-toggle:checked~.nav-bar-box {
+    width: 250px;
+}
+/* close button */
+.close {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+#menu-toggle:checked+.hamburger {
+    display: none;
+}
+#menu-toggle:checked~.nav-bar-box .close {
+    display: block;
+}
+h1
+{
+    text-align: center;
+    font-weight: bold;
+    font-size:40px;
+    margin: 0px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+
+    <form action="/insert" method="POST">
+        <div class="box">
+            <h1>Insert Employee Details</h1>
+
+            <div class="center">
+                <div class="center-input">
+                    <label>Name</label><input type="text" placeholder="Enter Employee Name" name="name" required>
+                </div>
+                <div class="center-input">
+                    <label>Age</label>
+                    <input type="number" placeholder="Enter Employee Age" name="age" required>
+                </div>
+                <div class="center-input">
+                    <label>DoB</label>
+                    <input type="text" placeholder="Enter Employee DoB" name="dob" required>
+                </div>
+                <div class="center-input">
+                    <label>Designation</label><input type="text" placeholder="Enter Employee Designation"
+                        name="designation" required>
+                </div>
+                <div class="center-input">
+                    <label>Department</label><input type="text" placeholder="Enter Employee Department"
+                        name="department" required>
+                </div>
+                <div class="center-input">
+                    <label>Address</label><input type="text" placeholder="Enter Employee Address" name="address"
+                        required>
+                </div>
+                <div class="center-input">
+                    <label>Phone no</label><input type="text" placeholder="Enter Employee Phone no" name="phone"
+                        required>
+                </div>
+                <div class="center-input">
+                    <label>Salary</label><input type="text" placeholder="Enter Employee Salary" name="salary" required>
+                </div>
+                <div class="center-input">
+                    <button type="submit">Submit</button>
+                </div>
+                <div class="center-input">
+                    <a href="/main">Back</a>
+                </div>
+                {% if msg %}
+                <p style="color:black; text-align:center;">
+                    {{msg}}
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+
+
+</body>
+
+</html>
