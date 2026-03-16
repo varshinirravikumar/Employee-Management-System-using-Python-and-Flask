@@ -7,7 +7,7 @@ This project works with the following menus and only Admin can use the web appli
 Admin Login
 Main menu:
  1.Insert Employee Details
- 2. Select Employee Details
+ 2.Select Employee Details
  3.Update Employee Details
  4.Delete Employee Details
  5.Sign Out
