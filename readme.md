@@ -24,6 +24,9 @@ XAMPP Control Panel and visual studio code
 
 In VS Code terminal install flask and mysql 
 PIP INSTALL FLASK
+
+
+
 PIP INSTALL MYSQL -CONNECTOR-PYTHON
 
 create a project folders 
