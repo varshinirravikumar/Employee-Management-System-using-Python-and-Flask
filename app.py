@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,redirect
 import mysql.connector
 
 app = Flask(__name__)
-con= mysql.connector.connect(host="localhost",user="root",password="",database="pythonproject")
+con= mysql.connector.connect(host="localhost",user="root",password="",database="pythonproject1")
 
 @app.route("/")
 def login_page():
@@ -12,7 +12,7 @@ def login_page():
 def login():
     username = request.form['username']
     password = request.form['password']
-    con = mysql.connector.connect(host="localhost",user="root",password="",database="pythonproject")
+    con = mysql.connector.connect(host="localhost",user="root",password="",database="pythonproject1")
     cur = con.cursor()
     query = "Select * from logintable where username= %s and password = %s"
     cur.execute(query,(username,password))
